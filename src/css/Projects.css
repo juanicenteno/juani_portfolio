@@ -1,0 +1,107 @@
+.projects_container {
+    width: 90%;
+    margin: auto;
+}
+
+.projects_container h2 {
+    font-size: 30px;
+}
+
+.projects_container p {
+    font-size: 14px;
+    color: var(--white);
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+}
+
+.box_project {
+    /* border: 1px solid var(--grey); */
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 5px 3px rgba(119, 53, 136, .459);
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box_project img {
+    width: 13rem;
+}
+
+.project_desc p {
+    font-size: 14px;
+    color: var(--grey);
+}
+
+.technologies_used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.technologies_used li {
+    padding: .5rem 1rem;
+    background-color: #4444444a;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    border-radius: 5rem;
+    font-size: 14px;
+    color: var(--grey);
+}
+
+.technologies_used li svg {
+    width: 16px;
+}
+
+.links_project {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.links_project a {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background-color: var(--purple);
+    padding: .5rem 1rem;
+}
+
+.links_project a svg {
+    width: 18px;
+    height: 18px;
+}
+
+.octicon-mark-github {
+    fill: #fff;
+}
+
+.see-more{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.see-more span{
+    font-size: 16px;
+    color: var(--grey);
+    font-family: var(--font-secondary);
+}
+
+.see-more a{
+    font-size: 16px;
+    background-color: #4444444a;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+    margin-top: .7rem;
+    border-radius: 10px;
+}

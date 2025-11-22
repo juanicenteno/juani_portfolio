@@ -1,0 +1,76 @@
+body {
+    background-image: url(/src/assets/background.webp), linear-gradient(120deg, #000, #000000d6);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    padding-bottom: 4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    /* Sin subrayado */
+}
+
+button,
+img,
+li {
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+    /* Subrayado al pasar el mouse */
+}
+
+ul,
+ol {
+    list-style: none;
+    /* Elimina los puntos de las listas */
+}
+
+h1,h2,h3{
+    font-family: var(--font-titles);
+    color: var(--white);
+}
+
+p,a,li{
+    font-family: var(--font-text);
+    color: #ebebeb;
+}
+
+.purple{
+    color: var(--purple);
+}
+
+.purple2{
+    color: var(--purple2) !important;
+}
+
+.point {
+    display: block;
+    width: 6px;
+    height: 4px;
+    background-color: var(--purple2);
+    margin-bottom: 1rem;
+}
+
+:root{
+    --purple: #8900BE;
+    --purple2: #CD5FF8;
+    --white: #FFFFFF;
+    --grey: #CECECE;
+
+    --font-titles: 'Inconsolata', monospace;
+    --font-text: 'geist mono', monospace;
+    --font-secondary: 'PT Mono', monospace;
+}
