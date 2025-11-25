@@ -1,9 +1,9 @@
 body {
     background-image: url(/src/assets/background.webp), linear-gradient(120deg, #000, #000000d6);
     background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    background-position: 50%;
     background-blend-mode: overlay;
 }
 
