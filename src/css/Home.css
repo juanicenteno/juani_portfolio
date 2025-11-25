@@ -7,14 +7,14 @@ svg {
 }
 
 .presentation_container {
-    width: 95%;
-    margin: 3rem auto;
+    width: 90%;
+    margin: 3rem auto 6rem;
     background-image: url(/src/assets/my_pic.jpg), linear-gradient(120deg, #000000b0, #000000b0);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-blend-mode: overlay;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 10px;
 }
 
@@ -87,14 +87,11 @@ svg {
 
 .about_me {
     width: 90%;
-    margin: auto;
+    margin: 0 auto 6rem;
 }
 
 .about_me h2 {
     font-size: 30px;
-    display: flex;
-    align-items: baseline;
-    gap: .5rem;
 }
 
 .about_me p {
@@ -143,7 +140,7 @@ svg {
 
 .my_studies {
     width: 90%;
-    margin: 4rem auto;
+    margin: 0 auto 6rem;
     /* border: 1px solid #cecece; */
     box-shadow: 0px 0px 5px 1px #3b3b3b4d;
     border-radius: 10px;

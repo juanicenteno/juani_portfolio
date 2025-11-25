@@ -1,0 +1,35 @@
+.my_skills {
+    width: 90%;
+    margin: 6rem auto 0;
+}
+
+.my_skills h2{
+    margin-bottom: 2rem;
+    font-size: 30px;
+}
+
+.languages {
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.languages li {
+    padding: .5rem 1rem;
+    box-shadow: 0px 0px 5px 3px rgb(61 61 61 / 46%);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--grey);
+    transition: all .3s;
+}
+
+.languages li:hover{
+     box-shadow: 0px 0px 5px 3px rgba(119, 53, 136, .459);
+}
+
+.languages li svg{
+    width: 20px;
+    height: 20px;
+}

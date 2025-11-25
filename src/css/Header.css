@@ -68,3 +68,24 @@ header {
 .nav_mobile svg {
     width: 24px;
 }
+
+.nav_desktop{
+    display: none;
+}
+
+@media (min-width: 1024px){
+    .btn_menu{
+        display: none;
+    }
+    .nav_mobile{
+        display: none;
+    }
+    .nav_desktop{
+        display: flex;
+        gap: 4rem;
+        font-size: 16px;
+    }
+    .content_header{
+        align-items: center;
+    }
+}

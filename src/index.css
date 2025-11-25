@@ -3,8 +3,12 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     background-blend-mode: overlay;
-    padding-bottom: 4rem;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -57,11 +61,11 @@ p,a,li{
 }
 
 .point {
-    display: block;
+    display: inline-block;
     width: 6px;
     height: 4px;
     background-color: var(--purple2);
-    margin-bottom: 1rem;
+    margin-left: .5rem;
 }
 
 :root{

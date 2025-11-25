@@ -1,0 +1,41 @@
+[
+    {
+        "id": "1",
+        "img": "https://soumyajit.vercel.app/static/media/chatify.7206044e0b5cdad44726.png",
+        "name": "Ayres de Calafate | Hotel Boutique",
+        "description": "Esta versión representa una actualización completa de la web de Ayres de Calafate. El proyecto original fue desarrollado con React + Vite, pero se tomó la decisión de migrarlo a Next.js para aprovechar sus ventajas en rendimiento, SEO y arquitectura.",
+        "technologies": [
+            "react.js",
+            "Next.js",
+            "Javascript"
+        ],
+        "github": "",
+        "website": "https://www.ayresdecalafate.com/"
+    },
+    {
+        "id": "2",
+        "img": "https://soumyajit.vercel.app/static/media/chatify.7206044e0b5cdad44726.png",
+        "name": "Ayres Dorados | Lodge Hotel",
+        "description": "Esta versión representa una actualización completa de la web de Ayres de Calafate. El proyecto original fue desarrollado con React + Vite, pero se tomó la decisión de migrarlo a Next.js para aprovechar sus ventajas en rendimiento, SEO y arquitectura.",
+        "technologies": [
+            "react.js",
+            "Next.js",
+            "Javascript"
+        ],
+        "github": "",
+        "website": "https://www.ayresdorados.com/"
+    },
+    {
+        "id": "3",
+        "img": "https://soumyajit.vercel.app/static/media/chatify.7206044e0b5cdad44726.png",
+        "name": "Simplicity Software",
+        "description": "Esta versión representa una actualización completa de la web de Ayres de Calafate. El proyecto original fue desarrollado con React + Vite, pero se tomó la decisión de migrarlo a Next.js para aprovechar sus ventajas en rendimiento, SEO y arquitectura.",
+        "technologies": [
+            "react.js",
+            "Next.js",
+            "Javascript"
+        ],
+        "github": "",
+        "website": "https://www.simplicitysoftware.site/"
+    }
+]

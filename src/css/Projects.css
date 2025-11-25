@@ -14,12 +14,17 @@
     margin-bottom: 2rem;
 }
 
+.container_boxes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
 .box_project {
     /* border: 1px solid var(--grey); */
     padding: 1rem;
     border-radius: 15px;
     box-shadow: 0 4px 5px 3px rgba(119, 53, 136, .459);
-    margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,6 +92,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 4rem;
 }
 
 .see-more span{
@@ -104,4 +110,13 @@
     padding: .5rem 1rem;
     margin-top: .7rem;
     border-radius: 10px;
+}
+
+@media (min-width: 1024px){
+    .container_boxes{
+        justify-content: center;
+    }
+    .box_project{
+        flex: 0 0 44%;
+    }
 }

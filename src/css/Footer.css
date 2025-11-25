@@ -1,0 +1,29 @@
+footer{
+    background-color: #090019;
+    margin-top: 4rem;
+}
+
+.footer_container{
+    width: 90%;
+    margin: auto;
+    padding: 1rem 0;
+}
+
+.footer_container p{
+    font-size: 16px;
+    text-align: center;
+}
+
+.footer_container ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+
+.footer_container svg{
+    width: 24px;
+    height: 24px;
+}
