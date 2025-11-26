@@ -34,6 +34,23 @@
     height: 20px;
 }
 
+.first_skills, .second_skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.second_skills{
+    margin-top: 4rem;
+}
+
+.frontend_skills p{
+    font-size: 18px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-family: var(--font-secondary);
+}
+
 @media (min-width: 1444px){
     .my_skills{
         width: 80%;
