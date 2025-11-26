@@ -33,3 +33,9 @@
     width: 20px;
     height: 20px;
 }
+
+@media (min-width: 1444px){
+    .my_skills{
+        width: 80%;
+    }
+}

@@ -1,6 +1,6 @@
 footer{
     background-color: #090019;
-    margin-top: 4rem;
+    margin-top: 6rem;
 }
 
 .footer_container{
@@ -26,4 +26,11 @@ footer{
 .footer_container svg{
     width: 24px;
     height: 24px;
+}
+
+
+@media (min-width: 1444px){
+    .footer_container{
+        width: 80%;
+    }
 }

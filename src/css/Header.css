@@ -73,6 +73,14 @@ header {
     display: none;
 }
 
+.nav_desktop a{
+    transition: all .3s;
+}
+
+.nav_desktop a:hover{
+    opacity: .7;
+}
+
 @media (min-width: 1024px){
     .btn_menu{
         display: none;
@@ -89,3 +97,10 @@ header {
         align-items: center;
     }
 }
+
+@media (min-width: 1444px){
+    .content_header{
+        width: 80%;
+    }
+}
+
