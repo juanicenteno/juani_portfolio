@@ -1,41 +1,40 @@
 [
     {
         "id": "1",
-        "img": "https://soumyajit.vercel.app/static/media/chatify.7206044e0b5cdad44726.png",
+        "img": "/ayres_laptop.png",
         "name": "Ayres de Calafate | Hotel Boutique",
         "description": "Esta versión representa una actualización completa de la web de Ayres de Calafate. El proyecto original fue desarrollado con React + Vite, pero se tomó la decisión de migrarlo a Next.js para aprovechar sus ventajas en rendimiento, SEO y arquitectura.",
         "technologies": [
-            "react.js",
             "Next.js",
-            "Javascript"
+            "HTML & CSS"
         ],
-        "github": "",
+        "github": "https://github.com/juanicenteno/hotel_ayres_calafate_next",
         "website": "https://www.ayresdecalafate.com/"
     },
     {
         "id": "2",
-        "img": "https://soumyajit.vercel.app/static/media/chatify.7206044e0b5cdad44726.png",
+        "img": "/dorados_laptop.png",
         "name": "Ayres Dorados | Lodge Hotel",
-        "description": "Esta versión representa una actualización completa de la web de Ayres de Calafate. El proyecto original fue desarrollado con React + Vite, pero se tomó la decisión de migrarlo a Next.js para aprovechar sus ventajas en rendimiento, SEO y arquitectura.",
+        "description": "Diseño y desarrollo de un sitio web de alto rendimiento. Se utilizó Astro para aprovechar la velocidad inherente a la generación de sitios estáticos (SSG), permitiendo entregar HTML puro para una carga instantánea. A pesar de ser estático, la arquitectura permite la implementación de componentes dinámicos como el formulario de contacto, construido con React.",
         "technologies": [
-            "react.js",
-            "Next.js",
-            "Javascript"
+            "Astro",
+            "React.js",
+            "HTML & CSS"
         ],
-        "github": "",
+        "github": "https://github.com/juanicenteno/ayres_dorados",
         "website": "https://www.ayresdorados.com/"
     },
     {
         "id": "3",
-        "img": "https://soumyajit.vercel.app/static/media/chatify.7206044e0b5cdad44726.png",
-        "name": "Simplicity Software",
-        "description": "Esta versión representa una actualización completa de la web de Ayres de Calafate. El proyecto original fue desarrollado con React + Vite, pero se tomó la decisión de migrarlo a Next.js para aprovechar sus ventajas en rendimiento, SEO y arquitectura.",
+        "img": "/simplicity_laptop.png",
+        "name": "Simplicity Software | Portfolio y Servicios",
+        "description": "Sitio web personal creado para presentar y ofrecer mis servicios de desarrollo. Construido con React + Vite para asegurar un entorno de desarrollo moderno y un empaquetado final liviano. Incluye un formulario de contacto funcional y utiliza la librería Framer Motion para animaciones fluidas y una experiencia de usuario (UX) dinámica y atractiva.",
         "technologies": [
-            "react.js",
-            "Next.js",
-            "Javascript"
+            "React.js",
+            "Framer Motion",
+            "HTML & CSS"
         ],
-        "github": "",
+        "github": "https://github.com/juanicenteno/simplicitySoftware--site",
         "website": "https://www.simplicitysoftware.site/"
     }
 ]
