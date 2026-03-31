@@ -1,5 +1,6 @@
 ---
 import "../css/Home.css";
+const { t } = Astro.props
 ---
 
 <div id="home">
@@ -20,14 +21,14 @@ import "../css/Home.css";
                             d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
                         ></path>
                     </svg>
-                    <span>SOBRE MÍ</span>
+                    <span>{t.about_me}</span>
                 </article>
                 <article class="who_am_i">
-                    <h1>¡Hola, soy Juan Ignacio! 👋</h1>
+                    <h1>{t.hello_im} 👋</h1>
                     <p>
-                        Apasionado 
-                        <span class="purple2">Desarrollador Web Full Stack</span> 
-                        de Argentina, fusionando código de alto rendimiento con pensamiento estratégico para crear productos web rápidos y escalables.
+                        {t.hello_subtitle}  
+                        <span class="purple2">{t.hello_subtitlePartColor} </span> 
+                        {t.hello_subtitlePart2} 
                     </p>
                 </article>
                 <article class="my_mission">
@@ -46,48 +47,46 @@ import "../css/Home.css";
                                 d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
                             ></path>
                         </svg>
-                        <h2>MI MISIÓN</h2>
+                        <h2>{t.my_mission}</h2>
                     </div>
                     <p>
-                        Cierro la brecha entre el 
-                        <span class="purple">desarrollo y los objetivos de negocio.</span> 
-                        Mi enfoque no es solo escribir código, sino diseñar
-                        <span class="purple">soluciones robustas</span> 
-                        que funcionen sin problemas, desde el
-                        <span class="purple">servidor Linux</span> 
-                        hasta la pantalla del usuario.
+                        {t.my_missionSubtitle} 
+                        <span class="purple">{t.my_missionSubtitleColor}</span> 
+                        {t.my_missionSubtitle2}
+                        <span class="purple">{t.my_missionSubtitleColor2}</span> 
+                        {t.my_missionSubtitle3}
+                        <span class="purple">{t.my_missionSubtitleColor3}</span> 
+                        {t.my_missionSubtitle4}
                     </p>
-                    <span>Codifica con propósito, despliega con confianza. 🚀</span>
+                    <span>{t.my_missionSubtitleColor4} 🚀</span>
                 </article>
             </section>
 
         <section class="about_me">
-            <h2>Sobre mí<small class="point"></small></h2>
+            <h2>{t.about_me}<small class="point"></small></h2>
             <p>
-                Soy un 
-                <span class="purple2">Desarrollador Web Full Stack</span> 
-                a quien le encanta transformar ideas en productos confiables y escalables. 
-                Con el tiempo, he explorado diversas tecnologías y he descubierto mi pasión en la construcción de
-                 <span class="purple2">sistemas de alto rendimiento</span> 
-                 y experiencias de usuario intuitivas.
+                {t.i_am} 
+                <span class="purple2">{t.about_meDescColor} </span> 
+                {t.about_meDesc}
+                 <span class="purple2">{t.about_meDescColor2}</span> 
+                 {t.about_meDesc2}
 
                 <br /><br />
 
-                Actualmente, me especializo en el ecosistema web moderno, centrándome en
+                {t.about_meDesc3}
                  <span class="purple2">Next.js y Astro</span> 
-                 para ofrecer un rendimiento ultrarrápido.
-                 No solo utilizo frameworks; los optimizo activamente para el
-                 <span class="purple2">SEO y la velocidad.</span> 
+                 {t.about_meDesc4}
+                 <span class="purple2">{t.about_meDescColor4}</span> 
 
                 <br /><br />
 
-                Mi background en 
-                <span class="purple2">Estrategia Digital</span> 
-                me da una perspectiva única: me aseguro de que las soluciones técnicas impulsen la
-                <span class="purple2">interacción del usuario</span> 
-                y los resultados del negocio. Mi primera línea de código fue escrita alrededor de
+                {t.about_meDesc5}
+                <span class="purple2">{t.about_meDescColor5}</span> 
+                {t.about_meDesc6}
+                <span class="purple2">{t.about_meDescColor6}</span> 
+                {t.about_meDesc7}
                 <span class="purple2">2022</span> 
-                , y no he dejado de construir desde entonces.
+                {t.about_meDesc8}
             </p>
             <article class="links_container">
                 <a
@@ -108,7 +107,7 @@ import "../css/Home.css";
                             d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"
                         ></path>
                     </svg>
-                    Visitá mi GitHub
+                    {t.visit_gitHub}
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -123,7 +122,7 @@ import "../css/Home.css";
                             d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"></path>
                     </svg>
                 </a>
-                <a href="" class="link_contact">
+                <a href="mailto:juanignaciocenteno5@gmail.com" class="link_contact">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -138,7 +137,7 @@ import "../css/Home.css";
                             d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
                         ></path>
                     </svg>
-                    Contáctame
+                    {t.contact_me}
                     <svg
                         id="studies"
                         xmlns="http://www.w3.org/2000/svg"
@@ -175,15 +174,14 @@ import "../css/Home.css";
                         d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
                     ></path>
                 </svg>
-                MIS ESTUDIOS
+                {t.my_studies}
             </h3>
             <p>
-                ¡Bienvenido! Esta sección refleja mi compromiso con el aprendizaje 
-                continuo y mi inversión en habilidades técnicas.
+                {t.my_studies_subtitle}
                 <br>
-                 Descubre mi trayectoria académica y mis próximos objetivos.
+                 {t.my_studies_subtitle2}
             </p>
-            <a href="https://drive.google.com/file/d/1ggXc-bsqrvshonLDgLA9PCippflPuQJi/view?usp=sharing" target="_blank" class="dl_cv">Descargar CV</a>
+            <a href="./Juan_Ignacio_Centeno_CV.pdf" target="_blank" class="dl_cv">{t.download_cv}</a>
         </article>
         <article class="studies_list">
             <div class="box">
@@ -203,13 +201,12 @@ import "../css/Home.css";
                                 d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
                             ></path>
                         </svg>
-                        Desarrollo web Full-Stack
+                        {t.curse_1}
                     </h4>
                     <span class="year_studie">2022 - 2023</span>
                 </div>
                 <p>
-                    Creación de sitios web de alto rendimiento con código limpio, 
-                    centrándose en metodologías full-stack y sólidos fundamentos de SEO.
+                    {t.curse_1_desc}
                 </p>
                 <span class="university">
                     <svg
@@ -246,12 +243,12 @@ import "../css/Home.css";
                                 d="M4.098 19.902a3.75 3.75 0 0 0 5.304 0l6.401-6.402M6.75 21A3.75 3.75 0 0 1 3 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 0 0 3.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008Z"
                             ></path>
                         </svg>
-                        Diseño UX-UI
+                        {t.curse_2}
                     </h4>
                     <span class="year_studie">2022 - 2026</span>
                 </div>
                 <p>
-                    Creación de interfaces de usuario modernas e intuitivas que atraigan y conviertan a los usuarios.
+                    {t.curse_2_desc}
                 </p>
                 <span class="university">
                     <svg
@@ -268,14 +265,9 @@ import "../css/Home.css";
                             d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
                         ></path>
                     </svg>
-                    Universidad Tecnológica Nacional (UTN)
+                    {t.university_name}
                 </span>
             </div>
-            <span class="proximamente">
-                <small class="line"></small>
-                PROXIMAMENTE
-                <small class="line"></small>
-            </span>
             <div class="box">
                 <div class="studie_title">
                     <h4>
@@ -293,12 +285,12 @@ import "../css/Home.css";
                                 d="M4.098 19.902a3.75 3.75 0 0 0 5.304 0l6.401-6.402M6.75 21A3.75 3.75 0 0 1 3 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 0 0 3.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008Z"
                             ></path>
                         </svg>
-                        Tecnicatura universitaria en Programación
+                        {t.university}
                     </h4>
-                    <span class="year_studie">INICIO EN: 2026</span>
+                    <span class="year_studie">Mar 2026</span>
                 </div>
                 <p>
-                    Dominar las estructuras de datos, algoritmos y arquitectura de software para construir sistemas escalables y reforzar la lógica de programación central.
+                    {t.university_desc}
                 </p>
                 <span class="university" id="projects">
                     <svg
@@ -315,7 +307,7 @@ import "../css/Home.css";
                             d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
                         ></path>
                     </svg>
-                    Universidad Tecnológica Nacional (UTN)
+                    {t.university_name}
                 </span>
             </div>
         </article>

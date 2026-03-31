@@ -1,10 +1,11 @@
 ---
 import "../css/Skills.css";
+const { t } = Astro.props
 ---
 
 <section class="my_skills" id="skills">
     <h2>
-        Mis Skills<small class="point"></small>
+        {t.my_skills}<small class="point"></small>
     </h2>
     <div class="container_skills">
         <div class="first_skills">
@@ -148,7 +149,7 @@ import "../css/Skills.css";
         </div>
         <div class="second_skills">
             <article class="frontend_skills">
-                <p>Diseño</p>
+                <p>{t.design}</p>
                 <ul class="languages">
                     <li>
                         <svg

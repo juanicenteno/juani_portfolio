@@ -1,13 +1,15 @@
 ---
 import "../css/Projects.css";
-import projects from "../data/projects.json";
+import { getProjects } from '../data/projects'
+const { t } = Astro.props
+const projects = getProjects(t)
 ---
 
 <section class="projects_container">
     <article class="projects_title">
-        <h2>Proyectos Destacados<small class="point"></small></h2>
+        <h2>{t.projects_title}<small class="point"></small></h2>
         <p>
-            Explorando mi trabajo más reciente: proyectos Full Stack enfocados en performance, infraestructura y experiencia de usuario (UX/UI).
+            {t.projects_subTitle}
         </p>
     </article>
     <article class="container_boxes">
@@ -60,9 +62,9 @@ import projects from "../data/projects.json";
             ))}
     </article>
     <article class="see-more">
-        <span>¿Quieres ver más?</span>
+        <span>{t.wanna_see_more}</span>
         <a href="https://github.com/juanicenteno" target="_blank"
-            >Ver todos los Proyectos <svg
+            >{t.see_all_projects} <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"

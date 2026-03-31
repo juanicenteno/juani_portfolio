@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+const { t } = Astro.props
 ---
 
 <!doctype html>
@@ -19,7 +20,7 @@ import Footer from "../components/Footer.astro";
 		<title>Mi Portfolio - Web Developer</title>
 	</head>
 	<body>
-		<Header />
+		<Header t={t}/>
 		<slot />
 		<Footer />
 	</body>

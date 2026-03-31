@@ -1,0 +1,120 @@
+---
+const isEn = Astro.url.pathname.startsWith('/en')
+
+const current = isEn
+  ? { flag: 'https://flagcdn.com/us.svg', label: 'EN' }
+  : { flag: 'https://flagcdn.com/es.svg', label: 'ES' }
+
+const other = isEn
+  ? { flag: 'https://flagcdn.com/es.svg', label: 'ES', href: '/' }
+  : { flag: 'https://flagcdn.com/us.svg', label: 'EN', href: '/en' }
+---
+
+<div class="lang_switcher">
+  <button class="lang_current">
+    <img src={current.flag} alt={current.label} />
+    <span>{current.label}</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m6 9 6 6 6-6"/>
+    </svg>
+  </button>
+
+  <div class="lang_dropdown">
+    <a href={other.href} class="lang_option">
+      <img src={other.flag} alt={other.label} />
+      <span>{other.label}</span>
+    </a>
+  </div>
+</div>
+
+<style>
+  .lang_switcher {
+    position: relative;
+  }
+
+  .lang_current {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+    color: inherit;
+  }
+
+  .lang_current img,
+  .lang_option img {
+    width: 22px;
+    height: 15px;
+    object-fit: cover;
+    border-radius: 2px;
+  }
+
+  .lang_current svg {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.2s;
+  }
+
+  .lang_current span,
+  .lang_option span {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .lang_dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    background: #1a1a1a;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-4px);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .lang_switcher.open .lang_dropdown {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+
+  .lang_switcher.open .lang_current svg {
+    transform: rotate(180deg);
+  }
+
+  .lang_option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.15s;
+  }
+
+  .lang_option:hover {
+    background: rgba(255,255,255,0.08);
+  }
+</style>
+
+<script>
+  const switcher = document.querySelector('.lang_switcher')
+  const btn = document.querySelector('.lang_current')
+
+  btn?.addEventListener('click', () => {
+    switcher?.classList.toggle('open')
+  })
+
+  document.addEventListener('click', (e) => {
+    if (!switcher?.contains(e.target as Node)) {
+      switcher?.classList.remove('open')
+    }
+  })
+</script>
