@@ -45,6 +45,10 @@ const other = isEn
     color: inherit;
   }
 
+  .lang_current span, .lang_option span{
+    color: var(--purple);
+  }
+
   .lang_current img,
   .lang_option img {
     width: 22px;
@@ -57,6 +61,7 @@ const other = isEn
     width: 14px;
     height: 14px;
     transition: transform 0.2s;
+    color: white;
   }
 
   .lang_current span,
@@ -105,16 +110,21 @@ const other = isEn
 </style>
 
 <script>
-  const switcher = document.querySelector('.lang_switcher')
-  const btn = document.querySelector('.lang_current')
+  const switchers = document.querySelectorAll('.lang_switcher')
 
-  btn?.addEventListener('click', () => {
-    switcher?.classList.toggle('open')
+  switchers.forEach((switcher) => {
+    const btn = switcher.querySelector('.lang_current')
+
+    btn?.addEventListener('click', () => {
+      switcher.classList.toggle('open')
+    })
   })
 
   document.addEventListener('click', (e) => {
-    if (!switcher?.contains(e.target as Node)) {
-      switcher?.classList.remove('open')
-    }
+    switchers.forEach((switcher) => {
+      if (!switcher.contains(e.target as Node)) {
+        switcher.classList.remove('open')
+      }
+    })
   })
 </script>
