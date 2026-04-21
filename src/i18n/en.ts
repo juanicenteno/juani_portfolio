@@ -60,6 +60,9 @@ export const t = {
   project_simplicity: "Simplicity Software",
   project_simplicity_desc: "A personal website built to showcase and offer my development services. Built with React + Vite for a modern development environment and lightweight final bundle. Includes a functional contact form and uses Framer Motion for smooth animations and an engaging user experience.",
 
+  project_briefAI: "AI Brief Assistance",
+  project_briefAI_desc: "UI Brief Assistance is a comprehensive AI-powered platform designed to automate and streamline the creation of brand identities and design briefs. The tool transforms a basic concept into a complete, visual, and professional strategic document in a matter of seconds.",
+
   wanna_see_more: "Want to see more?",
   see_all_projects: "See all projects",
 

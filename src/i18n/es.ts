@@ -60,6 +60,9 @@ export const t = {
   project_simplicity: "Simplicity Software",
   project_simplicity_desc: "Sitio web personal creado para presentar y ofrecer mis servicios de desarrollo. Construido con React + Vite para asegurar un entorno de desarrollo moderno y un empaquetado final liviano. Incluye un formulario de contacto funcional y utiliza la librería Framer Motion para animaciones fluidas y una experiencia de usuario (UX) dinámica y atractiva.",
   
+  project_briefAI: "AI Brief Assistance",
+  project_briefAI_desc: "UI Brief Assistance es una plataforma integral impulsada por Inteligencia Artificial diseñada para automatizar y agilizar el proceso de creación de identidades de marca y briefs de diseño. La herramienta transforma una idea básica en un documento estratégico completo, visual y profesional en cuestión de segundos.",
+
   wanna_see_more: "¿Quieres ver más?",
   see_all_projects: "Ver todos los proyectos",
   
