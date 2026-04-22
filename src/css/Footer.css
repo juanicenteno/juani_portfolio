@@ -1,36 +1,112 @@
-footer{
-    background-color: #090019;
+footer {
+    background: linear-gradient(180deg, #090019 0%, #0d0d14 100%);
     margin-top: 6rem;
+    padding: 3rem 0;
+    border-top: 1px solid var(--glass-border);
+    position: relative;
+    overflow: hidden;
 }
 
-.footer_container{
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--purple2), transparent);
+    opacity: 0.5;
+}
+
+.footer_container {
     width: 90%;
     margin: auto;
     padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.footer_container p{
+.footer_container p {
     font-size: 16px;
     text-align: center;
+    color: var(--grey);
+    transition: color var(--transition-smooth);
 }
 
-.footer_container ul{
+.footer_container p:hover {
+    color: var(--white);
+}
+
+.footer_container ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1rem;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
+.footer_container li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform var(--transition-smooth);
+}
 
-.footer_container svg{
+.footer_container li:hover {
+    transform: translateY(-3px);
+}
+
+.footer_container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    transition: all var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer_container a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(205, 95, 248, 0.2), transparent);
+    opacity: 0;
+    transition: opacity var(--transition-smooth);
+}
+
+.footer_container a:hover::before {
+    opacity: 1;
+}
+
+.footer_container a:hover {
+    border-color: rgba(205, 95, 248, 0.4);
+    box-shadow: 0 0 20px rgba(205, 95, 248, 0.3);
+    transform: translateY(-3px);
+}
+
+.footer_container svg {
     width: 24px;
     height: 24px;
+    position: relative;
+    z-index: 1;
+    transition: transform var(--transition-smooth);
 }
 
+.footer_container a:hover svg {
+    transform: scale(1.15);
+}
 
-@media (min-width: 1444px){
-    .footer_container{
+@media (min-width: 1444px) {
+    .footer_container {
         width: 80%;
     }
 }

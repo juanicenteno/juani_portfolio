@@ -1,10 +1,21 @@
-body {
-    background-image: url(/src/assets/background.webp), linear-gradient(120deg, #000, #000000d6);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: 50%;
-    background-blend-mode: overlay;
+:root{
+    --purple: #8900BE;
+    --purple2: #CD5FF8;
+    --purple-neon: #ff00ff;
+    --cyan-neon: #00ffff;
+    --white: #FFFFFF;
+    --grey: #CECECE;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+    --font-titles: 'Inconsolata', monospace;
+    --font-text: 'geist mono', monospace;
+    --font-secondary: 'PT Mono', monospace;
+
+    --transition-smooth: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --glow-purple: 0 0 20px rgba(205, 95, 248, 0.5);
+    --glow-cyan: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
 html {
@@ -18,45 +29,52 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    background: 
+        radial-gradient(ellipse at 20% 20%, rgba(137, 0, 190, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(205, 95, 248, 0.08) 0%, transparent 70%),
+        linear-gradient(120deg, #0a0a0a, #0d0d0d);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50%;
+    min-height: 100vh;
+}
+
 a {
     text-decoration: none;
     color: #000;
     cursor: pointer;
-    /* Sin subrayado */
 }
 
-button,
-img,
-li {
+button, img, li {
     cursor: pointer;
 }
 
 a:hover {
     text-decoration: none;
-    /* Subrayado al pasar el mouse */
 }
 
-ul,
-ol {
+ul, ol {
     list-style: none;
-    /* Elimina los puntos de las listas */
 }
 
-h1,h2,h3{
+h1, h2, h3 {
     font-family: var(--font-titles);
     color: var(--white);
 }
 
-p,a,li{
+p, a, li {
     font-family: var(--font-text);
     color: #ebebeb;
 }
 
-.purple{
+.purple {
     color: var(--purple);
 }
 
-.purple2{
+.purple2 {
     color: var(--purple2) !important;
 }
 
@@ -66,6 +84,23 @@ p,a,li{
     height: 4px;
     background-color: var(--purple2);
     margin-left: .5rem;
+}
+
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: var(--glass-shadow);
+}
+
+.glow-purple {
+    box-shadow: var(--glow-purple);
+}
+
+.glow-cyan {
+    box-shadow: var(--glow-cyan);
 }
 
 .fade-in {
@@ -79,13 +114,29 @@ p,a,li{
   transform: translateY(0);
 }
 
-:root{
-    --purple: #8900BE;
-    --purple2: #CD5FF8;
-    --white: #FFFFFF;
-    --grey: #CECECE;
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(205, 95, 248, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(205, 95, 248, 0.6);
+    }
+}
 
-    --font-titles: 'Inconsolata', monospace;
-    --font-text: 'geist mono', monospace;
-    --font-secondary: 'PT Mono', monospace;
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
 }

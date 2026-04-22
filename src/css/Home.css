@@ -15,7 +15,30 @@ svg {
     background-size: cover;
     background-blend-mode: overlay;
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.presentation_container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(205, 95, 248, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.presentation_container:hover::before {
+    left: 100%;
+}
+
+.presentation_container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(205, 95, 248, 0.25);
 }
 
 .about_title {
@@ -34,6 +57,7 @@ svg {
 .about_title svg {
     color: var(--purple2);
     width: 22px;
+    animation: pulse-glow 2s ease-in-out infinite;
 }
 
 .who_am_i {
@@ -47,10 +71,17 @@ svg {
 .title_mission h2 {
     color: var(--white);
     font-size: 20px;
+    position: relative;
 }
 
 .who_am_i p {
     font-size: 14px;
+    color: var(--grey);
+    line-height: 1.6;
+    transition: color var(--transition-smooth);
+}
+
+.who_am_i:hover p {
     color: var(--white);
 }
 
@@ -63,26 +94,61 @@ svg {
 .title_mission svg {
     color: var(--purple2);
     width: 22px;
+    animation: pulse-glow 2s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.my_mission {
+    padding: 1.5rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.my_mission::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--purple2), transparent);
+    opacity: 0;
+    transition: opacity var(--transition-smooth);
+}
+
+.my_mission:hover::before {
+    opacity: 1;
+}
+
+.my_mission:hover {
+    box-shadow: 0 8px 32px rgba(205, 95, 248, 0.2);
 }
 
 .my_mission span {
     color: var(--purple2);
     font-size: 14px;
     font-family: var(--font-text);
+    text-shadow: 0 0 10px rgba(205, 95, 248, 0.5);
+    transition: text-shadow var(--transition-smooth);
 }
 
-.my_mission {
-    padding: 1rem;
-    background-color: #32323279;
-    backdrop-filter: blur(5px);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.my_mission:hover span {
+    text-shadow: 0 0 20px rgba(205, 95, 248, 0.8);
 }
 
 .my_mission p {
     font-size: 14px;
+    color: var(--grey);
+    line-height: 1.6;
 }
 
 .about_me {
@@ -92,10 +158,32 @@ svg {
 
 .about_me h2 {
     font-size: 30px;
+    color: var(--white);
+    position: relative;
+    display: inline-block;
+}
+
+.about_me h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--purple2), var(--cyan-neon));
+    transition: width var(--transition-smooth);
+    border-radius: 2px;
+}
+
+.about_me:hover h2::after {
+    width: 100%;
 }
 
 .about_me p {
     font-size: 14px;
+    color: var(--grey);
+    line-height: 1.7;
+    margin-top: 1rem;
 }
 
 .links_container {
@@ -110,52 +198,110 @@ svg {
     display: flex;
     align-items: center;
     gap: .5rem;
-    padding: .5rem 1rem;
-    border-radius: 10px;
-    background-color: var(--purple);
-    transition: all .3s;
+    padding: .8rem 1.5rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--purple), #6b1a89);
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    z-index: 1;
 }
 
-.link_github:hover{
-    opacity: .8;
+.link_github::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #a511f0, var(--purple));
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.link_github:hover::before {
+    left: 0;
+}
+
+.link_github:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(205, 95, 248, 0.4);
 }
 
 .link_github svg {
     fill: #fff;
+    width: 20px;
+    transition: transform var(--transition-smooth);
+}
+
+.link_github:hover svg {
+    transform: scale(1.1);
 }
 
 .link_contact {
     display: flex;
     align-items: center;
     gap: .5rem;
-    padding: .5rem 1rem;
-    border-radius: 10px;
-    /* border: 1px solid var(--purple); */
-    /* box-shadow: 0px 0px 3px var(--purple); */
-    background-color: #2C2C2C;
-    transition: all .3s;
+    padding: .8rem 1.5rem;
+    border-radius: 12px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
 }
 
-.link_contact:hover{
-    opacity: .7;
+.link_contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), transparent);
+    opacity: 0;
+    transition: opacity var(--transition-smooth);
+    z-index: 0;
+}
+
+.link_contact:hover::before {
+    opacity: 1;
+}
+
+.link_contact:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.15);
+    border-color: rgba(0, 255, 255, 0.3);
 }
 
 .link_contact .plane {
     transform: rotate(-40deg);
+    transition: transform var(--transition-smooth);
+}
+
+.link_contact:hover .plane {
+    transform: rotate(-40deg) translate(3px, -3px);
 }
 
 .link_svg {
-    width: 16px;
+    width: 18px;
+    position: relative;
+    z-index: 1;
 }
 
 .my_studies {
     width: 90%;
     margin: 0 auto 6rem;
-    /* border: 1px solid #cecece; */
-    box-shadow: 0px 0px 5px 1px #3b3b3b4d;
-    border-radius: 10px;
-    padding: 1rem;
-    background-color: #00000042;
+    border-radius: 16px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.my_studies:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(205, 95, 248, 0.15);
 }
 
 .studies_title {
@@ -172,24 +318,60 @@ svg {
     font-family: var(--font-secondary);
     font-weight: 500;
     text-transform: uppercase;
+    color: var(--white);
 }
 
 .studies_title h3 svg {
-    background-color: var(--purple);
+    background: linear-gradient(135deg, var(--purple), #6b1a89);
     width: 30px;
-    border-radius: 5px;
-    padding: .2rem;
+    border-radius: 8px;
+    padding: .4rem;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.studies_title h3:hover svg {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(205, 95, 248, 0.5);
 }
 
 .studies_title p {
     font-size: 14px;
+    color: var(--grey);
 }
 
 .dl_cv {
     padding: .5rem 1rem;
-    border: 1px solid #ffffff7c;
+    border: 1px solid var(--purple2);
     width: fit-content;
-    border-radius: 5rem;
+    border-radius: 2rem;
+    font-size: 14px;
+    color: var(--purple2);
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dl_cv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(205, 95, 248, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.dl_cv:hover::before {
+    left: 100%;
+}
+
+.dl_cv:hover {
+    background: rgba(205, 95, 248, 0.1);
+    box-shadow: 0 0 20px rgba(205, 95, 248, 0.3);
 }
 
 .studies_list {
@@ -200,14 +382,40 @@ svg {
 }
 
 .box {
-    background-color: #32323285;
-    /* border: 1px solid var(--grey); */
-    box-shadow: 0px 0px 5px 1px #cecece4d;
-    padding: 1rem;
-    border-radius: 15px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    padding: 1.5rem;
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--purple2), var(--cyan-neon));
+    opacity: 0;
+    transition: opacity var(--transition-smooth);
+}
+
+.box:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 32px rgba(205, 95, 248, 0.2);
+    border-color: rgba(205, 95, 248, 0.3);
+}
+
+.box:hover::after {
+    opacity: 1;
 }
 
 .studie_title {
@@ -220,12 +428,14 @@ svg {
 .studie_title svg {
     width: 20px;
     color: var(--purple2);
+    animation: float 3s ease-in-out infinite;
 }
 
 .studie_title span {
     font-family: var(--font-text);
     color: var(--purple2);
     font-size: 12px;
+    text-shadow: 0 0 8px rgba(205, 95, 248, 0.4);
 }
 
 .studie_title h4 {
@@ -235,11 +445,17 @@ svg {
     align-items: center;
     flex-wrap: wrap;
     gap: 5px;
+    transition: text-shadow var(--transition-smooth);
+}
+
+.studie_title h4:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .box p {
     font-size: 14px;
     color: var(--grey);
+    line-height: 1.6;
 }
 
 .university {
@@ -252,6 +468,11 @@ svg {
 
 .university svg {
     width: 16px;
+    transition: transform var(--transition-smooth);
+}
+
+.university:hover svg {
+    transform: scale(1.2);
 }
 
 .proximamente {
@@ -263,12 +484,13 @@ svg {
     gap: 1rem;
     justify-content: center;
     margin-top: 2rem;
+    animation: pulse-glow 2s ease-in-out infinite;
 }
 
 .line {
     width: 100%;
     height: 1px;
-    background-color: var(--purple);
+    background: linear-gradient(90deg, transparent, var(--purple2), transparent);
 }
 
 @media (min-width: 1024px) {
@@ -292,7 +514,7 @@ svg {
         margin: 0;
     }
 
-    .my_studies{
+    .my_studies {
         padding: 3rem;
     }
 }
