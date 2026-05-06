@@ -55,16 +55,16 @@ export const t = {
   projects_subTitle: "Trabajo real para clientes reales: sitios web enfocados en performance, SEO y experiencia de usuario.",
 
   project_ayresCalafate: "Ayres de Calafate | Hotel Boutique",
-  project_ayresCalafate_desc: "Migración completa de React + Vite a Next.js para mejorar performance, SEO y arquitectura. Sitio en producción para un hotel boutique en El Calafate, Patagonia.",
+  project_ayresCalafate_desc: "Sitio web oficial de un hotel boutique en El Calafate, Patagonia. El proyecto original estaba construido en React + Vite — funcional, pero sin SSR ni capacidades reales de SEO. Migré la arquitectura completa a Next.js 15 con App Router, implementé internacionalización en tres idiomas (ES/EN/PT) con next-intl, y estructuré el código en módulos reutilizables con CSS Modules. El resultado es un sitio que carga rápido, indexa bien en buscadores, y puede escalar sin reescribirse.",
 
   project_ayresDorados: "Ayres Dorados | Lodge Hotel",
-  project_ayresDorados_desc: "Sitio estático de alto rendimiento construido con Astro + React. HTML puro en producción para carga instantánea, con formulario de contacto dinámico.",
+  project_ayresDorados_desc: "Sitio para un lodge hotel en Rio Grande, pensado para captar turistas antes de llegar al destino. Elegí Astro como base para garantizar HTML estático puro en el primer render — velocidad máxima sin sacrificar interactividad. Los componentes dinámicos, como el formulario de contacto, están construidos con React integrado en la arquitectura de islas de Astro. El sitio pesa poco, carga rápido en conexiones móviles, y funciona bien en el segmento de turismo donde la velocidad en celular es crítica.",
 
   project_simplicity: "Simplicity Software",
-  project_simplicity_desc: "Sitio de servicios construido con React + Vite y animaciones con Framer Motion. Incluye formulario de contacto funcional.",
+  project_simplicity_desc: "Sitio de presentación de servicios de desarrollo web, construido con React + Vite y Framer Motion para animaciones fluidas. Incluye formulario de contacto funcional. Es el primer proyecto donde trabajé conscientemente la experiencia de usuario como parte del diseño técnico, no como un agregado.",
 
   project_briefAI: "AI Brief Assistance",
-  project_briefAI_desc: "Plataforma impulsada por IA que genera identidades de marca y briefs de diseño completos a partir de una idea básica.",
+  project_briefAI_desc: "Herramienta web que automatiza la generación de briefs de identidad de marca. El usuario ingresa una idea básica y recibe un documento estratégico completo en segundos, generado con IA. Construido con React y Node.js, con integración directa a la API de un modelo de lenguaje. El proyecto nació de una necesidad real que veía en clientes que llegaban sin material de referencia claro para empezar un proyecto.",
 
   wanna_see_more: "¿Querés ver más?",
   see_all_projects: "Ver todos los proyectos",
