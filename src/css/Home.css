@@ -151,6 +151,26 @@ svg {
     line-height: 1.6;
 }
 
+.my_mission_link {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  color: var(--purple2);
+  font-size: 14px;
+  font-family: var(--font-text);
+  text-decoration: none;
+  width: fit-content;
+  transition: gap var(--transition-smooth);
+}
+
+.my_mission_link:hover {
+  gap: .7rem;
+}
+
+.my_mission_link .link_svg {
+  width: 14px;
+}
+
 .about_me {
     width: 90%;
     margin: 0 auto 6rem;
@@ -502,10 +522,12 @@ svg {
         margin: 0 auto 6rem;
         gap: 3rem;
         padding-top: 4rem;
+        height: 30rem;
     }
 
     .presentation_container {
         width: 50%;
+        height: 100%;
         margin: 0;
     }
 
@@ -527,3 +549,4 @@ svg {
         width: 80%;
     }
 }
+

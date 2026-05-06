@@ -40,6 +40,7 @@ body {
     background-attachment: fixed;
     background-position: 50%;
     min-height: 100vh;
+    
 }
 
 a {
@@ -139,4 +140,23 @@ p, a, li {
     100% {
         background-position: 200% center;
     }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--purple);
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--purple2);
 }
