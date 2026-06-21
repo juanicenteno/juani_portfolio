@@ -73,4 +73,6 @@ export const t = {
   design: "Design",
   my_projects: "My projects",
   home: "Home",
+  meta_title: "Juan Ignacio Centeno | Full Stack Web Developer",
+  meta_description: "Professional portfolio of Juan Ignacio Centeno, Full Stack Web Developer from Argentina. Discover my web development projects and programming studies.",
 }

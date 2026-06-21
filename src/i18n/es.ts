@@ -73,4 +73,6 @@ export const t = {
   design: "Diseño",
   my_projects: "Mis proyectos",
   home: "Inicio",
+  meta_title: "Juan Ignacio Centeno | Desarrollador Web Full Stack",
+  meta_description: "Portfolio profesional de Juan Ignacio Centeno, Desarrollador Web Full Stack de Argentina. Descubrí mis proyectos de desarrollo y mis estudios en programación.",
 }

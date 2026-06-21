@@ -1,11 +1,12 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-const { t } = Astro.props
+const { t } = Astro.props;
+const lang = Astro.url.pathname.startsWith('/en') ? 'en' : 'es';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -13,11 +14,26 @@ const { t } = Astro.props
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Inconsolata:wght@200..900&family=PT+Mono&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Outfit:wght@300..900&family=Plus+Jakarta+Sans:wght@300..800&display=swap"
 			rel="stylesheet"
 		/>
 		<meta name="generator" content={Astro.generator} />
-		<title>Mi Portfolio - Web Developer</title>
+		<title>{t.meta_title}</title>
+		<meta name="description" content={t.meta_description} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:title" content={t.meta_title} />
+		<meta property="og:description" content={t.meta_description} />
+		<meta property="og:image" content={new URL('/logo.png', Astro.url)} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={Astro.url} />
+		<meta property="twitter:title" content={t.meta_title} />
+		<meta property="twitter:description" content={t.meta_description} />
+		<meta property="twitter:image" content={new URL('/logo.png', Astro.url)} />
 	</head>
 	<body>
 		<Header t={t}/>
