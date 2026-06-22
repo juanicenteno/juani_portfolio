@@ -25,7 +25,7 @@ export const getProjects = (t: any) => [
     description: t.project_briefAI_desc,
     technologies: ["Node.js", "React.js", "HTML & CSS"],
     github: "https://github.com/juanicenteno/UI_Brief_Assistance",
-    website: "https://briefassist.site/"
+    website: "https://www.briefassist.site/"
   },
   {
     id: "4",
