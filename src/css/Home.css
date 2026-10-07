@@ -73,7 +73,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: radial-gradient(circle at 90% 10%, rgba(205, 95, 248, 0.12), transparent 45%), url(../assets/my_pic.jpg);
+    background-image: linear-gradient(90deg, rgba(4, 4, 8, 0.75) 0%, rgba(4, 4, 8, 0.35) 100%), radial-gradient(circle at 90% 10%, rgba(205, 95, 248, 0.12), transparent 45%), url(../assets/my_pic.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -83,6 +83,7 @@
 
 .status_badge {
     align-self: flex-start;
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
@@ -176,6 +177,17 @@
     line-height: 1.6;
     color: #e2e8f0;
     max-width: 90%;
+}
+
+.hero_actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.hero_actions .action_btn {
+    padding: 0.8rem 1.4rem;
 }
 
 /* --- CARD STUDIES --- */

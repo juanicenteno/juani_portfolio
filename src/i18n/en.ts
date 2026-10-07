@@ -3,7 +3,7 @@ export const t = {
   hello_im: "Hi, I'm Juan Ignacio!",
   hello_subtitle: "Full Stack",
   hello_subtitlePartColor: "Web Developer",
-  hello_subtitlePart2: "from Argentina. I build fast, scalable web products with a focus on real results.",
+  hello_subtitlePart2: "Based in Argentina, I build fast, scalable web products focused on real results.",
   my_mission: "Studying at UTN",
   my_missionSubtitle: "Currently enrolled in the",
   my_missionSubtitleColor: "University Technician in Programming.",
@@ -52,19 +52,31 @@ export const t = {
   university_follow: "Follow my progress →",
 
   projects_title: "Featured Projects",
-  projects_subTitle: "Real work for real clients: websites focused on performance, SEO and user experience.",
+  projects_subTitle: "Real work for real clients: websites and tools focused on performance, SEO and solving concrete business problems.",
+  projects_client_title: "Client work",
+  projects_personal_title: "Products & personal projects",
+  projects_personal_subTitle: "What I build on my own: AI products and game systems development.",
+  view_code: "Code",
+  view_site: "Live site",
 
   project_ayresCalafate: "Ayres de Calafate | Boutique Hotel",
-  project_ayresCalafate_desc: "The official website for a boutique hotel in El Calafate, Patagonia. The original project was built with React + Vite—functional, but lacking SSR and true SEO capabilities. I migrated the entire architecture to Next.js 15 using the App Router, implemented internationalization in three languages (ES/EN/PT) with next-intl, and structured the code into reusable modules using CSS Modules. The result is a fast-loading, SEO-optimized site designed to scale without requiring a rewrite.",
+  project_ayresCalafate_highlight: "Lighthouse 40 → 100",
+  project_ayresCalafate_desc: "Official website for a boutique hotel in El Calafate, Patagonia. I owned the whole project: UI design, development and booking engine integration. I built the first version with React + Vite; when the site needed SSR and real SEO, I migrated it to Next.js 15 with the App Router, added internationalization in three languages (ES/EN/PT) with next-intl, and reorganized the code into reusable modules with CSS Modules. Lighthouse performance went from 40 to 100.",
 
   project_ayresDorados: "Ayres Dorados | Lodge Hotel",
-  project_ayresDorados_desc: "A website for a lodge in Rio Negro (Argentina), designed to capture tourists' interest before they reach their destination. I chose Astro to ensure pure static HTML on the initial render—maximizing speed without sacrificing interactivity. Dynamic components are built with React using Astro’s Islands architecture. Additionally, I developed an internal booking system for receptionists that reflects data directly in Excel for streamlined management, as well as a voucher system that generates custom PDF templates based on user input. The site is lightweight, loads fast on mobile, and excels in the tourism sector where mobile performance is critical for conversion.",
+  project_ayresDorados_desc: "Website for a lodge in Sierra Grande, Río Negro (Argentina), which I built from scratch: design, development and booking engine integration. I chose Astro to serve static HTML on first render and used React islands only where interactivity is needed, such as the gallery and carousel. It loads fast on mobile connections, which is where conversion happens in tourism.",
 
-  project_simplicity: "Simplicity Software",
-  project_simplicity_desc: "A service presentation site for web development, built with React + Vite and Framer Motion for fluid animations. It includes a fully functional contact form. This was the first project where I consciously focused on user experience as a core part of the technical design, rather than just an afterthought.",
+  project_simplicitySystems: "Simplicity Systems | Internal tools",
+  project_simplicitySystems_highlight: "In use at Ayres Dorados",
+  project_simplicitySystems_desc: "A management system the Ayres Dorados front desk uses every day to enter bookings, track availability and generate vouchers. I kept it separate from the public website: bookings are validated in the form and synced to Google Sheets through Apps Script, and vouchers are generated as PDFs with a live preview using React-PDF, with no server needed.",
 
-  project_briefAI: "AI Brief Assistance",
-  project_briefAI_desc: "A web tool that automates the generation of brand identity briefs. Users input a basic idea and receive a complete strategic document in seconds, powered by AI. Built with React and Node.js, featuring direct integration with a large language model API. This project was born from a real-world need I observed in clients who arrived without clear reference materials to start a project.",
+  project_briefAI: "aiBrief | AI branding assistant",
+  project_briefAI_highlight: "Full stack + AI",
+  project_briefAI_desc: "A full stack app that turns a business idea into a complete brand brief: strategy, color palette, typography and user persona generated by an LLM, plus a logo and mockups created with image models (FLUX). It includes a chat to refine sections of the brief and PDF export with Puppeteer. Frontend in Next.js with Tailwind and shadcn/ui; backend in Express with MySQL.",
+
+  project_snow: "Project Snow | FiveM server",
+  project_snow_highlight: "16 custom Lua scripts",
+  project_snow_desc: "A post-apocalyptic survival roleplay server built on QBCore. I wrote the core systems in Lua: body temperature driven by weather, radiation, zombie infection, illnesses that progress in stages, and synced dynamic events such as meteorite strikes. I also built the official website in Next.js 16, with a Discord bot and automated performance audits using Lighthouse and Playwright.",
 
   wanna_see_more: "Want to see more?",
   see_all_projects: "See all projects",
@@ -73,6 +85,10 @@ export const t = {
   design: "Design",
   my_projects: "My projects",
   home: "Home",
+  available_to_work: "Available to work",
+  hero_cta_projects: "See projects",
+  connect_title: "Connect",
+  connect_subtitle: "Write to me or download my professional info.",
   meta_title: "Juan Ignacio Centeno | Full Stack Web Developer",
   meta_description: "Professional portfolio of Juan Ignacio Centeno, Full Stack Web Developer from Argentina. Discover my web development projects and programming studies.",
 }

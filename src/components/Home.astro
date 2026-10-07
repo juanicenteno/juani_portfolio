@@ -7,10 +7,10 @@ const { t } = Astro.props;
     <div class="bento_grid">
         <!-- CARD 1: HERO / INTRO -->
         <div class="bento_card card_hero">
-            <div class="status_badge">
+            <a href="#contact" class="status_badge">
                 <span class="pulse_dot"></span>
-                <span>{t.meta_title ? "Disponible para trabajar" : "Available to work"}</span>
-            </div>
+                <span>{t.available_to_work}</span>
+            </a>
             <div class="hero_content">
                 <h1>{t.hello_im} <span class="wave">👋</span></h1>
                 <h2 class="gradient_text">
@@ -19,6 +19,17 @@ const { t } = Astro.props;
                 <p class="hero_desc">
                     {t.hello_subtitlePart2}
                 </p>
+                <div class="hero_actions">
+                    <a href="#projects" class="action_btn btn_contact">
+                        <span>{t.hero_cta_projects}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="btn_icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                        </svg>
+                    </a>
+                    <a href="./Juan_Ignacio_Centeno_CV.pdf" class="action_btn btn_cv" target="_blank">
+                        <span>{t.download_cv}</span>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -89,14 +100,14 @@ const { t } = Astro.props;
         </div>
 
         <!-- CARD 4: ENLACES / CONTACTO -->
-        <div class="bento_card card_links">
+        <div class="bento_card card_links" id="contact">
             <div class="card_header">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="card_icon">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                 </svg>
-                <h3>{t.meta_title ? "Conectar" : "Connect"}</h3>
+                <h3>{t.connect_title}</h3>
             </div>
-            <p class="links_subtitle">{t.meta_title ? "Escribime o descargá mi información profesional." : "Write to me or download my professional info."}</p>
+            <p class="links_subtitle">{t.connect_subtitle}</p>
             <div class="links_grid">
                 <a href="mailto:juanignaciocenteno5@gmail.com" class="action_btn btn_contact">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="btn_icon">

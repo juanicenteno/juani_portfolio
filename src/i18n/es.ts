@@ -3,7 +3,7 @@ export const t = {
   hello_im: "¡Hola, soy Juan Ignacio!",
   hello_subtitle: "Desarrollador Web",
   hello_subtitlePartColor: "Full Stack",
-  hello_subtitlePart2: "de Argentina. Construyo productos web rápidos, escalables y con foco en resultados reales.",
+  hello_subtitlePart2: "Desde Argentina, construyo productos web rápidos, escalables y con foco en resultados reales.",
   my_mission: "Estudiando en UTN",
   my_missionSubtitle: "Actualmente cursando la",
   my_missionSubtitleColor: "Tecnicatura Universitaria en Programación.",
@@ -52,19 +52,31 @@ export const t = {
   university_follow: "Seguí mi proceso →",
 
   projects_title: "Proyectos Destacados",
-  projects_subTitle: "Trabajo real para clientes reales: sitios web enfocados en performance, SEO y experiencia de usuario.",
+  projects_subTitle: "Trabajo real para clientes reales: sitios y herramientas enfocados en performance, SEO y en resolver problemas concretos del negocio.",
+  projects_client_title: "Trabajo para clientes",
+  projects_personal_title: "Productos y proyectos propios",
+  projects_personal_subTitle: "Lo que construyo por mi cuenta: productos con IA y desarrollo de sistemas de juego.",
+  view_code: "Código",
+  view_site: "Ver sitio",
 
   project_ayresCalafate: "Ayres de Calafate | Hotel Boutique",
-  project_ayresCalafate_desc: "Sitio web oficial de un hotel boutique en El Calafate, Patagonia. El proyecto original estaba construido en React + Vite — funcional, pero sin SSR ni capacidades reales de SEO. Migré la arquitectura completa a Next.js 15 con App Router, implementé internacionalización en tres idiomas (ES/EN/PT) con next-intl, y estructuré el código en módulos reutilizables con CSS Modules. El resultado es un sitio que carga rápido, indexa bien en buscadores, y puede escalar sin reescribirse.",
+  project_ayresCalafate_highlight: "Lighthouse 40 → 100",
+  project_ayresCalafate_desc: "Sitio oficial de un hotel boutique en El Calafate, Patagonia. Me encargué del proyecto completo: diseño de la interfaz, desarrollo e integración del motor de reservas. La primera versión la construí en React + Vite; cuando el sitio necesitó SSR y SEO real, lo migré a Next.js 15 con App Router, sumé internacionalización en tres idiomas (ES/EN/PT) con next-intl y reorganicé el código en módulos reutilizables con CSS Modules. La performance en Lighthouse pasó de 40 a 100.",
 
   project_ayresDorados: "Ayres Dorados | Lodge Hotel",
-  project_ayresDorados_desc: "Sitio para un lodge hotel en Rio Negro (Argentina), pensado para captar turistas antes de llegar al destino. Elegí Astro como base para garantizar HTML estático puro en el primer render, logrando velocidad máxima sin sacrificar interactividad. Los componentes dinámicos están construidos con React bajo la arquitectura de islas. Además, desarrollé un sistema de reservas interno para recepcionistas que sincroniza los datos directamente en Excel para una gestión administrativa ágil, y un generador de vouchers que automatiza la creación de documentos en plantillas PDF a partir de los datos cargados. El sitio es ligero, carga rápido en conexiones móviles y optimiza la conversión en un sector donde la velocidad en celular es crítica.",
+  project_ayresDorados_desc: "Sitio para un lodge en Sierra Grande, Río Negro, que hice desde cero: diseño, desarrollo e integración del motor de reservas. Elegí Astro para servir HTML estático en el primer render y usé islas de React solo donde hace falta interactividad, como la galería y el carrusel. Carga rápido en conexiones móviles, que es donde se decide la conversión en turismo.",
 
-  project_simplicity: "Simplicity Software",
-  project_simplicity_desc: "Sitio de presentación de servicios de desarrollo web, construido con React + Vite y Framer Motion para animaciones fluidas. Incluye formulario de contacto funcional. Es el primer proyecto donde trabajé conscientemente la experiencia de usuario como parte del diseño técnico, no como un agregado.",
+  project_simplicitySystems: "Simplicity Systems | Herramientas internas",
+  project_simplicitySystems_highlight: "En uso en Ayres Dorados",
+  project_simplicitySystems_desc: "Sistema de gestión que usa a diario la recepción de Ayres Dorados para cargar reservas, controlar la disponibilidad y generar vouchers. Lo separé del sitio público: las reservas se validan en el formulario y se sincronizan con Google Sheets mediante Apps Script, y los vouchers se generan en PDF con vista previa en vivo usando React-PDF, sin servidor.",
 
-  project_briefAI: "AI Brief Assistance",
-  project_briefAI_desc: "Herramienta web que automatiza la generación de briefs de identidad de marca. El usuario ingresa una idea básica y recibe un documento estratégico completo en segundos, generado con IA. Construido con React y Node.js, con integración directa a la API de un modelo de lenguaje. El proyecto nació de una necesidad real que veía en clientes que llegaban sin material de referencia claro para empezar un proyecto.",
+  project_briefAI: "aiBrief | Asistente de branding con IA",
+  project_briefAI_highlight: "Full stack + IA",
+  project_briefAI_desc: "Aplicación full stack que convierte una idea de negocio en un brief de marca completo: estrategia, paleta, tipografías y user persona generados con un LLM, más logo y mockups creados con modelos de imagen (FLUX). Incluye un chat para refinar secciones del brief y exportación a PDF con Puppeteer. Front en Next.js con Tailwind y shadcn/ui; back en Express con MySQL.",
+
+  project_snow: "Project Snow | Servidor FiveM",
+  project_snow_highlight: "16 scripts propios en Lua",
+  project_snow_desc: "Servidor de rol de supervivencia post-apocalíptica sobre QBCore. Escribí en Lua los sistemas centrales: temperatura corporal según el clima, radiación, infección zombi, enfermedades que progresan por etapas y eventos dinámicos sincronizados, como la caída de meteoritos. También armé la web oficial en Next.js 16 con un bot de Discord y auditorías automáticas de performance con Lighthouse y Playwright.",
 
   wanna_see_more: "¿Querés ver más?",
   see_all_projects: "Ver todos los proyectos",
@@ -73,6 +85,10 @@ export const t = {
   design: "Diseño",
   my_projects: "Mis proyectos",
   home: "Inicio",
+  available_to_work: "Disponible para trabajar",
+  hero_cta_projects: "Ver proyectos",
+  connect_title: "Conectar",
+  connect_subtitle: "Escribime o descargá mi información profesional.",
   meta_title: "Juan Ignacio Centeno | Desarrollador Web Full Stack",
   meta_description: "Portfolio profesional de Juan Ignacio Centeno, Desarrollador Web Full Stack de Argentina. Descubrí mis proyectos de desarrollo y mis estudios en programación.",
 }
