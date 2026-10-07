@@ -24,5 +24,5 @@ pnpm-debug.log*
 .idea/
 
 # CV working files (only the PDF is published)
-public/*.docx
-public/*.bak
+public/**/*.docx
+public/**/*.bak
