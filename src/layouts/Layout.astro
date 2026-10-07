@@ -1,10 +1,21 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-const { t } = Astro.props;
-const lang = Astro.url.pathname.startsWith('/en') ? 'en' : 'es';
+import { getLang, translatePath } from "../utils/i18n";
+
+interface Props {
+	t: any;
+	title?: string;
+	description?: string;
+	image?: string;
+}
+
+const { t, title = t.meta_title, description = t.meta_description, image = "/og.png" } = Astro.props;
+const lang = getLang(Astro.url);
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const ogImage = new URL('/og.png', Astro.site);
+const ogImage = new URL(image, Astro.site);
+const esUrl = new URL(translatePath(Astro.url.pathname, "es"), Astro.site);
+const enUrl = new URL(translatePath(Astro.url.pathname, "en"), Astro.site);
 ---
 
 <!doctype html>
@@ -14,9 +25,9 @@ const ogImage = new URL('/og.png', Astro.site);
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/logo.png" />
 		<link rel="canonical" href={canonical} />
-		<link rel="alternate" hreflang="es" href={new URL('/', Astro.site)} />
-		<link rel="alternate" hreflang="en" href={new URL('/en/', Astro.site)} />
-		<link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />
+		<link rel="alternate" hreflang="es" href={esUrl} />
+		<link rel="alternate" hreflang="en" href={enUrl} />
+		<link rel="alternate" hreflang="x-default" href={esUrl} />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -24,22 +35,22 @@ const ogImage = new URL('/og.png', Astro.site);
 			rel="stylesheet"
 		/>
 		<meta name="generator" content={Astro.generator} />
-		<title>{t.meta_title}</title>
-		<meta name="description" content={t.meta_description} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
 		<meta property="og:locale" content={lang === 'en' ? 'en_US' : 'es_AR'} />
 		<meta property="og:url" content={canonical} />
-		<meta property="og:title" content={t.meta_title} />
-		<meta property="og:description" content={t.meta_description} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
 		<meta property="og:image" content={ogImage} />
 
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:url" content={canonical} />
-		<meta name="twitter:title" content={t.meta_title} />
-		<meta name="twitter:description" content={t.meta_description} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={ogImage} />
 	</head>
 	<body>

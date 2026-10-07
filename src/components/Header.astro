@@ -1,12 +1,14 @@
 ---
 import "../css/Header.css";
-const { t } = Astro.props;
 import LanguageSwitcher from "./LanguageSwitcher.astro"
+import { getLang, homePath } from "../utils/i18n";
+const { t } = Astro.props;
+const home = homePath(getLang(Astro.url));
 ---
 
 <header id="header">
     <section class="content_header">
-        <a href="/">
+        <a href={home}>
             <img src="/logo.png" alt="Juan Ignacio Centeno Logo" class="logo" />
         </a>
         <svg
@@ -25,16 +27,16 @@ import LanguageSwitcher from "./LanguageSwitcher.astro"
         </svg>
         <nav class="nav_desktop">
             <LanguageSwitcher />
-            <a href="/">{t.home}</a>
-            <!-- <a href="#studies">{t.my_studies}</a> -->
-            <a href="#projects">{t.my_projects}</a>
-            <a href="#skills">{t.my_skills}</a>
+            <a href={home}>{t.home}</a>
+            <!-- <a href={`${home}#studies`}>{t.my_studies}</a> -->
+            <a href={`${home}#projects`}>{t.my_projects}</a>
+            <a href={`${home}#skills`}>{t.my_skills}</a>
         </nav>
     </section>
 
     
     <nav class="nav_mobile">
-        <a href="/" class="links_mobileNav">
+        <a href={home} class="links_mobileNav">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -51,7 +53,7 @@ import LanguageSwitcher from "./LanguageSwitcher.astro"
             </svg>
             {t.home}
         </a>
-        <a href="#studies" class="links_mobileNav">
+        <a href={`${home}#studies`} class="links_mobileNav">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -68,7 +70,7 @@ import LanguageSwitcher from "./LanguageSwitcher.astro"
             </svg>
             {t.my_studies}
         </a>
-        <a href="#projects" class="links_mobileNav">
+        <a href={`${home}#projects`} class="links_mobileNav">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -85,7 +87,7 @@ import LanguageSwitcher from "./LanguageSwitcher.astro"
             </svg>
             {t.my_projects}
         </a>
-        <a href="#skills" class="links_mobileNav">
+        <a href={`${home}#skills`} class="links_mobileNav">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

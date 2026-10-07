@@ -2,6 +2,56 @@
 import "../css/Skills.css";
 import SkillIcon from "./SkillIcon.astro";
 const { t } = Astro.props;
+
+const columns = [
+    [
+        {
+            title: "Frontend",
+            skills: [
+                { icon: "html", name: "HTML5" },
+                { icon: "css", name: "CSS3" },
+                { icon: "javascript", name: "JavaScript" },
+                { icon: "typescript", name: "TypeScript" },
+                { icon: "tailwind", name: "Tailwind CSS" },
+            ],
+        },
+        {
+            title: "Frameworks",
+            skills: [
+                { icon: "nextjs", name: "Next.js" },
+                { icon: "react", name: "React.js" },
+                { icon: "astro", name: "Astro" },
+            ],
+        },
+    ],
+    [
+        {
+            title: "Backend",
+            skills: [
+                { icon: "nodejs", name: "Node.js" },
+                { icon: "express", name: "Express" },
+                { icon: "mysql", name: "MySQL" },
+                { icon: "lua", name: "Lua" },
+            ],
+        },
+        {
+            title: t.skills_tools,
+            skills: [
+                { icon: "git", name: "Git" },
+                { icon: "github", name: "GitHub" },
+                { icon: "vercel", name: "Vercel" },
+                { icon: "playwright", name: "Playwright" },
+            ],
+        },
+        {
+            title: t.design,
+            skills: [
+                { icon: "figma", name: "Figma" },
+                { icon: "canva", name: "Canva" },
+            ],
+        },
+    ],
+];
 ---
 
 <section class="my_skills" id="skills">
@@ -9,77 +59,22 @@ const { t } = Astro.props;
         {t.my_skills}<small class="point"></small>
     </h2>
     <div class="container_skills">
-        <div class="first_skills">
-            <article class="frontend_skills">
-                <p>Frontend Core</p>
-                <ul class="languages">
-                    <li>
-                        <SkillIcon name="html" />
-                        HTML5
-                    </li>
-                    <li>
-                        <SkillIcon name="css" />
-                        CSS3
-                    </li>
-                    <li>
-                        <SkillIcon name="javascript" />
-                        JavaScript
-                    </li>
-                </ul>
-            </article>
-            <article class="frontend_skills">
-                <p>Frameworks</p>
-                <ul class="languages">
-                    <li>
-                        <SkillIcon name="nextjs" />
-                        Next.js
-                    </li>
-                    <li>
-                        <SkillIcon name="react" />
-                        React.js
-                    </li>
-                    <li>
-                        <SkillIcon name="astro" />
-                        Astro
-                    </li>
-                </ul>
-            </article>
-        </div>
-        <div class="second_skills">
-            <article class="frontend_skills">
-                <p>{t.design}</p>
-                <ul class="languages">
-                    <li>
-                        <SkillIcon name="figma" />
-                        Figma
-                    </li>
-                    <li>
-                        <SkillIcon name="canva" />
-                        Canva
-                    </li>
-                </ul>
-            </article>
-            <article class="frontend_skills">
-                <p>Backend/Tools</p>
-                <ul class="languages">
-                    <li>
-                        <SkillIcon name="nodejs" />
-                        Node.js
-                    </li>
-                    <li>
-                        <SkillIcon name="mysql" />
-                        MySQL
-                    </li>
-                    <li>
-                        <SkillIcon name="git" />
-                        Git
-                    </li>
-                    <li>
-                        <SkillIcon name="github" />
-                        GitHub
-                    </li>
-                </ul>
-            </article>
-        </div>
+        {columns.map((groups, i) => (
+            <div class={i === 0 ? "first_skills" : "second_skills"}>
+                {groups.map((group) => (
+                    <article class="frontend_skills">
+                        <p>{group.title}</p>
+                        <ul class="languages">
+                            {group.skills.map((skill) => (
+                                <li>
+                                    <SkillIcon name={skill.icon} />
+                                    {skill.name}
+                                </li>
+                            ))}
+                        </ul>
+                    </article>
+                ))}
+            </div>
+        ))}
     </div>
 </section>

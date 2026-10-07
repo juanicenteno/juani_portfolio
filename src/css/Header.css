@@ -1,8 +1,8 @@
-header svg {
+#header svg {
     width: 30px;
 }
 
-header {
+#header {
     background: rgba(4, 4, 8, 0.75);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -14,7 +14,7 @@ header {
     transition: all var(--transition-smooth);
 }
 
-header:hover {
+#header:hover {
     background: rgba(4, 4, 8, 0.85);
 }
 
@@ -215,11 +215,5 @@ header:hover {
     .list_flags {
         display: flex;
         gap: 0.75rem;
-    }
-}
-
-@media (min-width: 1444px) {
-    .content_header {
-        width: 80%;
     }
 }

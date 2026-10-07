@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Juan Ignacio Centeno - CV</title>
+<!-- Source of public/Juan_Ignacio_Centeno_CV.pdf. Regenerate with: node cv/build-pdf.cjs -->
+<style>
+    @page { size: Letter; margin: 0.75in; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, Helvetica, sans-serif; color: #1a1a1a; font-size: 9.6pt; line-height: 1.32; }
+    a { color: #1155cc; }
+
+    header { text-align: center; margin-bottom: 8pt; }
+    h1 { font-size: 22pt; font-weight: 700; line-height: 1.2; }
+    .role { font-size: 12pt; font-weight: 700; color: #1a56a0; margin-top: 4pt; }
+    .contact { font-size: 9pt; color: #555; margin-top: 6pt; }
+    .contact a { color: #1a6b1a; }
+    .links { font-size: 9pt; color: #555; margin-top: 3pt; }
+    .links a { color: #1155cc; }
+    .sep { margin: 0 5pt; }
+
+    h2 { font-size: 11pt; font-weight: 700; color: #1a56a0; border-bottom: 1.2pt solid #1a56a0; padding-bottom: 2pt; margin: 10pt 0 5pt; }
+    p.text { text-align: justify; }
+
+    .job { margin-top: 6pt; }
+    .job_head { display: flex; justify-content: space-between; align-items: baseline; }
+    .job_title { font-size: 10.5pt; font-weight: 700; }
+    .job_company { font-size: 9.5pt; font-weight: 700; color: #1a56a0; }
+    .dot { color: #888; margin: 0 4pt; font-size: 9pt; }
+    .date { font-size: 9pt; font-style: italic; color: #888; white-space: nowrap; }
+    .place { font-size: 9pt; font-style: italic; color: #888; margin-bottom: 3pt; }
+    ul { padding-left: 15pt; }
+    li { margin-bottom: 0; }
+
+    .project { margin-top: 6pt; }
+    .project_title { font-size: 10.5pt; font-weight: 700; }
+    .project_stack { font-size: 9pt; font-weight: 700; color: #1a56a0; }
+    .project p { color: #222; }
+    .project a { font-size: 8.5pt; }
+
+    .edu { display: flex; justify-content: space-between; align-items: baseline; margin-top: 5pt; }
+    .edu_title { font-size: 10.5pt; font-weight: 700; }
+    .edu_org { color: #555; font-size: 9.5pt; }
+
+    .skills p { margin-top: 3pt; color: #333; }
+    .skills b { color: #1a1a1a; }
+    .keep { break-inside: avoid; }
+    h2 { break-after: avoid; }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Juan Ignacio Centeno</h1>
+        <div class="role">Desarrollador Web Full-Stack</div>
+        <div class="contact">
+            Buenos Aires, Argentina<span class="sep">•</span><a href="https://wa.me/5491171312513">+54 9 11 7131-2513</a><span class="sep">•</span>juanignaciocenteno5@gmail.com
+        </div>
+        <div class="links">
+            <a href="https://github.com/juanicenteno">Mi GitHub</a><span class="sep">•</span><a href="https://www.linkedin.com/in/juan-ignacio-centeno/">Mi LinkedIn</a><span class="sep">•</span><a href="https://juani-portfolio-six.vercel.app/">Mi Portfolio</a>
+        </div>
+    </header>
+
+    <h2>PERFIL PROFESIONAL</h2>
+    <p class="text">Desarrollador web programando desde 2022, con experiencia en proyectos reales para clientes del sector hotelero y turístico. Especializado en el desarrollo de sitios institucionales con Next.js, React y Astro, con foco en performance, SEO y experiencia de usuario. He liderado proyectos end-to-end: desde la arquitectura y el desarrollo front-end y back-end, hasta la administración de infraestructura Linux y la estrategia digital. Actualmente cursando la Tecnicatura Universitaria en Programación en la UTN.</p>
+
+    <h2>EXPERIENCIA PROFESIONAL</h2>
+    <div class="job keep">
+        <div class="job_head">
+            <div><span class="job_title">Desarrollador Web Full-Stack</span><span class="dot">•</span><span class="job_company">Ayres Dorados Lodge</span></div>
+            <span class="date">Oct 2025 – Presente</span>
+        </div>
+        <div class="place">Sierra Grande, Argentina</div>
+        <ul>
+            <li>Desarrollo del sitio institucional (ayresdorados.com) con Astro y React, logrando alto rendimiento y optimización SEO desde el lanzamiento.</li>
+            <li>Construcción de un sistema interno de reservas para recepcionistas sincronizado en tiempo real con Google Sheets, eliminando procesos manuales.</li>
+            <li>Desarrollo de un generador de vouchers que automatiza la creación de documentos PDF a partir de datos cargados en el sistema.</li>
+            <li>Gestión de versionado y mantenimiento de código con Git/GitHub.</li>
+        </ul>
+    </div>
+    <div class="job keep">
+        <div class="job_head">
+            <div><span class="job_title">Desarrollador Web Full-Stack &amp; Gestión Digital</span><span class="dot">•</span><span class="job_company">Ayres de Calafate</span></div>
+            <span class="date">Ene 2025 – Presente</span>
+        </div>
+        <div class="place">El Calafate, Argentina</div>
+        <ul>
+            <li>Diseño y desarrollo desde cero del sitio institucional (ayresdecalafate.com), primero en React + Vite y luego migrado por completo a Next.js 15 con App Router, mejorando el Lighthouse score de 40 a 100.</li>
+            <li>Implementación de internacionalización en tres idiomas (ES/EN/PT) con next-intl, arquitectura modular con CSS Modules e integración de motor de reservas con buscador interactivo propio de fechas y huéspedes.</li>
+            <li>Configuración y administración de servidor Debian, dominio y sistema de correos corporativos, asegurando disponibilidad 24/7.</li>
+            <li>Implementación de automatizaciones de contacto (formularios, WhatsApp) con foco en conversión de visitas a reservas.</li>
+        </ul>
+    </div>
+    <div class="job keep">
+        <div class="job_head">
+            <div><span class="job_title">Desarrollador Web &amp; Gestión Digital</span><span class="dot">•</span><span class="job_company">Altos del Iguazú Hotel</span></div>
+            <span class="date">Sep 2024 – Oct 2025</span>
+        </div>
+        <div class="place">Puerto Iguazú, Argentina</div>
+        <ul>
+            <li>Diseño y desarrollo del sitio web del hotel con foco en UX/UI y accesibilidad.</li>
+            <li>Migración a servidor Linux dedicado, optimizando infraestructura y velocidad de carga.</li>
+            <li>Configuración del sistema de correos corporativos e integración del backend de formularios de contacto.</li>
+            <li>Desarrollo de scripts de automatización para accesos directos (WhatsApp/Redes) y funcionalidades clave del sitio.</li>
+        </ul>
+    </div>
+    <div class="job keep">
+        <div class="job_head">
+            <div><span class="job_title">Community Manager</span><span class="dot">•</span><span class="job_company">South American Group</span></div>
+            <span class="date">Feb 2023 – Jul 2023</span>
+        </div>
+        <div class="place">Posadas, Argentina</div>
+        <ul>
+            <li>Análisis de métricas (engagement, alcance, seguidores) con Excel para reportes semanales de desempeño.</li>
+            <li>Optimización de contenido basada en tendencias y resultados para incrementar visibilidad de las marcas.</li>
+        </ul>
+    </div>
+
+    <h2>PROYECTOS DESTACADOS</h2>
+    <div class="project keep">
+        <div><span class="project_title">aiBrief | Asistente de branding con IA</span><span class="dot">•</span><span class="project_stack">Next.js 16 • React 19 • TypeScript • Tailwind • Node.js • MySQL • FLUX • Puppeteer</span></div>
+        <p>Aplicación web full-stack que automatiza la creación de briefs de identidad de marca usando IA (paleta, tipografías, user persona) y generación visual asíncrona de logos y mockups con FLUX. Incluye chat de refinamiento en lenguaje natural y exportación a PDF idéntico al diseño con Handlebars y Puppeteer.</p>
+        <a href="https://www.briefassist.site/">https://www.briefassist.site/</a>
+    </div>
+    <div class="project keep">
+        <div><span class="project_title">Simplicity Systems | Herramientas internas</span><span class="dot">•</span><span class="project_stack">Astro SSR • React 19 • React-PDF • Google Sheets • Apps Script</span></div>
+        <p>Suite de herramientas internas en producción para la recepción de Ayres Dorados. Gestiona reservas, sincroniza disponibilidad en tiempo real con Google Sheets (base de datos serverless con webhook de Google Apps Script) y genera vouchers en PDF en el navegador con @react-pdf/renderer sin costos de infraestructura.</p>
+        <a href="https://simplicitysystems.vercel.app/">https://simplicitysystems.vercel.app/</a>
+    </div>
+    <div class="project keep">
+        <div><span class="project_title">Project Snow | Servidor FiveM &amp; Web Oficial</span><span class="dot">•</span><span class="project_stack">Lua • FiveM • QBCore • ox_lib • Next.js 16 • Tailwind • discord.js • Playwright</span></div>
+        <p>Servidor de rol de supervivencia post-apocalíptica sobre QBCore con 16 scripts propios en Lua (clima, temperatura corporal, enfermedades por etapas y eventos de meteoritos sincronizados en red). Incluye web oficial en Next.js 16 con Tailwind, bot de Discord con discord.js y auditorías automáticas de performance con Playwright y Lighthouse.</p>
+        <a href="https://www.odysseyzombie.xyz/">https://www.odysseyzombie.xyz/</a>
+    </div>
+
+    <div class="keep">
+        <h2>EDUCACIÓN</h2>
+        <div class="edu"><span class="edu_title">Tecnicatura Universitaria en Programación</span><span class="date">Mar 2026 – En curso</span></div>
+        <div class="edu_org">Universidad Tecnológica Nacional (UTN)</div>
+        <div class="edu"><span class="edu_title">Diseño UX/UI</span><span class="date">2025 – Certificado</span></div>
+        <div class="edu_org">Universidad Tecnológica Nacional (UTN)</div>
+        <div class="edu"><span class="edu_title">Desarrollo Web Fullstack</span><span class="date">2022 – Certificado</span></div>
+        <div class="edu_org">Digital House</div>
+    </div>
+
+    <div class="skills keep">
+        <h2>HABILIDADES TÉCNICAS</h2>
+        <p><b>Front-End:</b> HTML5, CSS3, JavaScript (ES6+), TypeScript, React, Next.js, Astro, Tailwind CSS</p>
+        <p><b>Back-End &amp; APIs:</b> Node.js, Express, REST APIs, Lua, Google Apps Script</p>
+        <p><b>Bases de Datos:</b> MySQL, SQL, Google Sheets (Serverless DB)</p>
+        <p><b>DevOps &amp; Herramientas:</b> Linux (Debian), Git, GitHub, Vercel, Playwright, configuración de dominios, hosting y correos corporativos</p>
+        <p><b>Diseño &amp; Prototipado:</b> Figma, Canva, UX/UI</p>
+        <p><b>Inteligencia Artificial:</b> Integración de LLMs, Modelos de Generación Visual (FLUX), Prompt Engineering</p>
+        <p><b>Idiomas:</b> Español nativo – Inglés intermedio</p>
+    </div>
+</body>
+</html>

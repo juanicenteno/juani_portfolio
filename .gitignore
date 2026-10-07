@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# CV working files (only the PDF is published)
+public/*.docx
+public/*.bak

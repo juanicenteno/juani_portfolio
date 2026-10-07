@@ -1,6 +1,5 @@
 .my_skills {
     width: 90%;
-    max-width: 1200px;
     margin: 6rem auto;
 }
 
@@ -131,7 +130,6 @@
 
 @media (max-width: 600px) {
     .my_skills {
-        width: 95%;
         margin: 4rem auto;
     }
     .first_skills, .second_skills {

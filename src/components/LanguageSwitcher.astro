@@ -1,4 +1,6 @@
 ---
+import { translatePath } from "../utils/i18n";
+
 const isEn = Astro.url.pathname.startsWith('/en')
 
 const current = isEn
@@ -6,8 +8,8 @@ const current = isEn
   : { flag: 'https://flagcdn.com/es.svg', label: 'ES' }
 
 const other = isEn
-  ? { flag: 'https://flagcdn.com/es.svg', label: 'ES', href: '/' }
-  : { flag: 'https://flagcdn.com/us.svg', label: 'EN', href: '/en' }
+  ? { flag: 'https://flagcdn.com/es.svg', label: 'ES', href: translatePath(Astro.url.pathname, 'es') }
+  : { flag: 'https://flagcdn.com/us.svg', label: 'EN', href: translatePath(Astro.url.pathname, 'en') }
 ---
 
 <div class="lang_switcher">

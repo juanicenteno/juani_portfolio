@@ -1,11 +1,13 @@
 ---
 import "../css/Projects.css";
 import ProjectCard from "./ProjectCard.astro";
-import { getProjects } from '../data/projects'
+import { getProjects } from "../utils/projects";
+import { getLang } from "../utils/i18n";
 const { t } = Astro.props
-const projects = getProjects(t)
-const clientProjects = projects.filter((p) => p.category === "client")
-const personalProjects = projects.filter((p) => p.category === "personal")
+const lang = getLang(Astro.url)
+const projects = await getProjects(lang)
+const clientProjects = projects.filter((p) => p.data.category === "client")
+const personalProjects = projects.filter((p) => p.data.category === "personal")
 ---
 
 <section class="projects_container" id="projects">
@@ -18,7 +20,7 @@ const personalProjects = projects.filter((p) => p.category === "personal")
 
     <h3 class="projects_group_title">{t.projects_client_title}</h3>
     <article class="container_boxes">
-        {clientProjects.map((project) => <ProjectCard project={project} t={t} />)}
+        {clientProjects.map((project) => <ProjectCard project={project} lang={lang} t={t} />)}
     </article>
 
     <div class="projects_group_header">
@@ -26,7 +28,7 @@ const personalProjects = projects.filter((p) => p.category === "personal")
         <p>{t.projects_personal_subTitle}</p>
     </div>
     <article class="container_boxes">
-        {personalProjects.map((project) => <ProjectCard project={project} t={t} />)}
+        {personalProjects.map((project) => <ProjectCard project={project} lang={lang} t={t} />)}
     </article>
 
     <article class="see-more">

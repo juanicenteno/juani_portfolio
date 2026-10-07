@@ -1,0 +1,86 @@
+---
+import { Image, getImage } from "astro:assets";
+import { render } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import ProjectLinks from "./ProjectLinks.astro";
+import "../index.css";
+import "../css/Projects.css";
+import "../css/ProjectDetail.css";
+import { getProjects, getSlug, type ProjectEntry } from "../utils/projects";
+import { homePath, projectPath, type Lang } from "../utils/i18n";
+
+interface Props {
+    project: ProjectEntry;
+    lang: Lang;
+    t: any;
+}
+
+const { project, lang, t } = Astro.props;
+const { title, summary, image, highlight, role, technologies, github, website } = project.data;
+const { Content } = await render(project);
+const otherProjects = (await getProjects(lang)).filter((p) => p.id !== project.id);
+const ogImage = await getImage({ src: image, width: 1200, format: "png" });
+---
+
+<Layout t={t} title={`${title} · Juan Ignacio Centeno`} description={summary} image={ogImage.src}>
+    <main class="project_detail">
+        <a href={`${homePath(lang)}#projects`} class="detail_back">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+            </svg>
+            {t.back_to_projects}
+        </a>
+
+        <header class="detail_header">
+            {highlight && <span class="detail_highlight">{highlight}</span>}
+            <h1>{title}</h1>
+            <p class="detail_summary">{summary}</p>
+
+            <dl class="detail_meta">
+                <div>
+                    <dt>{t.role_label}</dt>
+                    <dd>{role}</dd>
+                </div>
+                <div>
+                    <dt>{t.stack_label}</dt>
+                    <dd>
+                        <ul class="technologies_used">
+                            {technologies.map((tech) => <li>{tech}</li>)}
+                        </ul>
+                    </dd>
+                </div>
+            </dl>
+
+            <div class="links_project detail_links">
+                <ProjectLinks github={github} website={website} t={t} />
+            </div>
+        </header>
+
+        <div class="browser_frame detail_frame">
+            <div class="browser_bar" aria-hidden="true">
+                <span></span><span></span><span></span>
+            </div>
+            <Image src={image} alt={title} widths={[720, 1440]} sizes="(min-width: 960px) 900px, 95vw" loading="eager" />
+        </div>
+
+        <article class="detail_content">
+            <Content />
+        </article>
+
+        <nav class="detail_others" aria-label={t.other_projects}>
+            <h2>{t.other_projects}</h2>
+            <ul>
+                {otherProjects.map((other) => (
+                    <li>
+                        <a href={projectPath(lang, getSlug(other))}>
+                            <span>{other.data.title}</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                            </svg>
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </nav>
+    </main>
+</Layout>

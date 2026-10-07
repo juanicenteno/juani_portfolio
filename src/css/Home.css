@@ -1,6 +1,5 @@
 .bento_container {
     width: 90%;
-    max-width: 1200px;
     margin: 8rem auto 4rem auto;
 }
 
@@ -211,7 +210,7 @@
 .timeline::before {
     content: '';
     position: absolute;
-    left: 4px;
+    left: 0;
     top: 6px;
     bottom: 6px;
     width: 2px;
@@ -309,6 +308,78 @@
     font-weight: 600;
 }
 
+/* --- CARD SERVICES --- */
+.card_services {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.services_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+.service_item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 1.4rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    transition: border-color var(--transition-smooth), transform var(--transition-smooth), background var(--transition-smooth);
+}
+
+.service_item:hover {
+    border-color: rgba(205, 95, 248, 0.35);
+    background: rgba(205, 95, 248, 0.04);
+    transform: translateY(-3px);
+}
+
+.service_icon {
+    width: 26px;
+    height: 26px;
+    color: var(--cyan-neon);
+    margin-bottom: 0.3rem;
+}
+
+.service_item h4 {
+    font-family: var(--font-titles);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.service_item p {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: var(--grey);
+    flex-grow: 1;
+}
+
+.service_link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--purple2);
+    transition: color var(--transition-smooth), gap var(--transition-smooth);
+}
+
+.service_link svg {
+    width: 14px;
+    height: 14px;
+}
+
+.service_item:hover .service_link {
+    color: var(--cyan-neon);
+    gap: 0.6rem;
+}
+
 /* --- CARD LINKS --- */
 .card_links {
     grid-column: span 1;
@@ -388,6 +459,7 @@
 @media (max-width: 1024px) {
     .bento_grid {
         grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: dense;
     }
     .card_hero {
         grid-column: span 2;
@@ -402,18 +474,23 @@
     .card_links {
         grid-column: span 1;
     }
+    .card_services {
+        grid-column: span 2;
+    }
 }
 
 @media (max-width: 768px) {
     .bento_container {
-        width: 95%;
         margin-top: 6rem;
+    }
+    .services_grid {
+        grid-template-columns: 1fr;
     }
     .bento_grid {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
-    .card_hero, .card_studies, .card_about, .card_links {
+    .card_hero, .card_studies, .card_about, .card_links, .card_services {
         grid-column: span 1;
         grid-row: span 1;
     }

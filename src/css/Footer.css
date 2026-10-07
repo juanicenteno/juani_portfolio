@@ -104,9 +104,3 @@ footer::before {
 .footer_container a:hover svg {
     transform: scale(1.15);
 }
-
-@media (min-width: 1444px) {
-    .footer_container {
-        width: 80%;
-    }
-}
